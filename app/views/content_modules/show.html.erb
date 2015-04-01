@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @content_module.title %>
+</p>
+
+<p>
+  <b>Subtitle:</b>
+  <%= @content_module.subtitle %>
+</p>
+
+
+<%= link_to 'Edit', edit_content_module_path(@content_module) %> |
+<%= link_to 'Back', content_modules_path %>

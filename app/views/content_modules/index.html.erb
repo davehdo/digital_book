@@ -1,0 +1,25 @@
+<h1>Listing content_modules</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Subtitle</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @content_modules.each do |content_module| %>
+  <tr>
+    <td><%= content_module.title %></td>
+    <td><%= content_module.subtitle %></td>
+    <td><%= link_to 'Show', content_module %></td>
+    <td><%= link_to 'Edit', edit_content_module_path(content_module) %></td>
+    <td><%= link_to 'Destroy', content_module, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Content module', new_content_module_path %>
