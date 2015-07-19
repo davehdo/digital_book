@@ -3,12 +3,13 @@ class ContentModulesController < ApplicationController
   # GET /content_modules
   # GET /content_modules.json
   def index
-    # @content_modules = ContentModule.all
-    # 
-    # respond_to do |format|
-    #   format.html # index.html.erb
-    #   format.json { render json: @content_modules }
-    # end
+
+    @content_modules = ContentModule.all
+    
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @content_modules }
+    end
   end
 
   # GET /content_modules/1

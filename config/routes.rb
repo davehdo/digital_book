@@ -1,6 +1,6 @@
 Agile::Application.routes.draw do
   scope "v3" do
-    resources :content_modules, path: "modules", :defaults => { :format => 'json' } do
+    resources :content_modules, path: "modules" do
       member do
         get "documents"
         get "documents/:document_id" => "content_modules#documents"
